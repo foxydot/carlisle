@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var t=$("#hp-top section.widget").length;$("#hp-top").addClass("cols-"+t);var o=12/t;$("#hp-top section.widget").addClass("col-sm-"+o),$("#hp-top section.widget").addClass("col-xs-12")});
