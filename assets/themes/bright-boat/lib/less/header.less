@@ -3,7 +3,6 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-  background-color: @white;
 }
 
 .site-header .wrap {
@@ -20,7 +19,7 @@ Site Header
   font-weight: 700;
   padding: 16px 0;
   padding: 1.6rem 0;
-  width: 400px;
+  width: 200px;
   position: relative;
 }
 
@@ -46,22 +45,17 @@ Site Header
 }
 
 .site-description {
-  .customserif;
-  color: @ltgreen;
-  font-size: 16px;
-  font-size: 1.6rem;
+  color: @dkgrey;
+  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   font-style: italic;
   line-height: 1;
   margin-bottom: 0;
-  position: absolute;
-  left: 120px;
-  top: 10px;
-  background-image: url(../img/logo-type.png);
-  background-position: top left;
-  background-repeat: no-repeat;
-  padding-top: 55px;
-  padding-left: 8px;
+  position: relative;
+  top: 135px;
+  width: 200px;
+  text-align: center;
 }
 
 /* Full width header, no widgets */
@@ -80,7 +74,6 @@ Site Header
   display: block;
   margin: 0 0 1rem;
   float: left;
-  width: 500px;
 }
 
 /* Logo, hide text */
@@ -97,10 +90,10 @@ Site Header
 .header-image .site-title{
     float: left;
   a {
-    background: url(../img/logo.png) no-repeat left;
-    min-height: 135px;
-    margin: 10px;
-    width: 115px;
+    background: url(../img/logo.png) no-repeat top center;
+    min-height: 120px;
+    margin: 10px 0;
+    width: 200px;
     background-size: contain;
   }
 }
@@ -111,6 +104,11 @@ Site Header
 .site-header .widget-area {
   float: right;
   text-align: right;
+  width: 400px;
+  padding-top: 2.4rem;
+  .widget{
+    display: inline-block;
+  }
 }
 
 .header-image .site-header .widget-area {

@@ -38,7 +38,7 @@
 @orange: #f90;
 @yellow: #FEF200;
 @green: rgba(84,130,0,1);
-@blue: #90C3DD;
+@blue: #23567C;
 @dkblue: #1F96D3;
 @purple: #976895;
 @ltbeige: #F0EFEB;
@@ -54,7 +54,7 @@
 @dkyellow: darken(@yellow, 20%);
 @ltgreen: #C2D19A;
 @dkgreen: darken(@green, 20%);
-@ltblue: #a8cffe;
+@ltblue: #90C3DD;
 @dkblue: #163559;
 @ltpurple: lighten(@green,20%);
 @dkpurple: darken(@green, 20%);
@@ -81,7 +81,7 @@
 @therule: 1px dotted @ltgrey;
 
 /* Buttons */
-.button(@color:@green) {
+.button(@color:@blue) {
   background-color: @color;
   border-radius: 0;
   padding: 6px 24px;
@@ -96,7 +96,7 @@
 }
 
 
-.button-hover(@color:@green) {
+.button-hover(@color:@blue) {
   .button(@color);
   background-color: darken(@color,10%);
 }

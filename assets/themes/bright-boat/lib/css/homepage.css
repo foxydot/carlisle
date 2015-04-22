@@ -20,7 +20,7 @@
 .button:visited,
 .button a:hover,
 .button a:visited {
-  background-color: #548200;
+  background-color: #23567c;
   border-radius: 0;
   padding: 6px 24px;
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
@@ -35,7 +35,7 @@
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: #334f00;
+  background-color: #183a54;
 }
 /* Clears */
 .msd-clearfix {
@@ -48,10 +48,6 @@
 #hp-top {
   display: block;
   min-height: 300px;
-  padding-bottom: 2rem;
-  margin: 4rem auto 2rem;
-  border-bottom: double 4px #cccccc;
-  box-shadow: 0 2px 2px #999999;
 }
 #hp-top .carousel {
   margin: 0 auto;
@@ -113,7 +109,7 @@
   outline: none;
 }
 #hp-top .carousel .carousel-control:hover {
-  color: #90c3dd;
+  color: #23567c;
 }
 #hp-top .carousel .carousel-control.right {
   left: auto;
@@ -171,7 +167,7 @@
   font-size: 2.4rem;
   font-weight: 400;
   text-align: center;
-  color: #a4cee3;
+  color: #296490;
   text-transform: uppercase;
 }
 #hp-callout .wrap .widget .readmore {

@@ -3,11 +3,26 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-  background-color: @ltgrey;
-  color: @white;
+  color: @dkgrey;
   clear: both;
   padding: 0 0 16px;
   padding: 0 0 1.6rem;
+    .widget_nav_menu{
+      .widget-title{
+        background: fade(@blue, 20%);
+        color: @dkblue;
+        font-weight: bold;
+        padding: 0.5rem;
+      }
+      ul.menu{
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+      }
+    }
   .wrap:after{
     .msd-clearfix;
   }
@@ -113,7 +128,7 @@ Footer Widgets
       margin: 0 auto;
     }
     input[type="submit"]:hover,input[type="button"]:hover,a.button:hover{
-      background-color: @green;
+      background-color: @blue;
     }
   }
 }

@@ -2,12 +2,12 @@
 /*
 Template Name: Front Page
 */
-remove_all_actions('genesis_loop');
+//remove_all_actions('genesis_loop');
 //remove sidebars (jsut in case)
 remove_all_actions('genesis_sidebar');
 remove_all_actions('genesis_sidebar_alt');
 //add_action('genesis_sidebar_alt','msdlab_homepage_sidebar_widgets');
-//remove_action('genesis_entry_header', 'genesis_do_post_title');
+remove_action('genesis_entry_header', 'genesis_do_post_title');
 
 /**
  * hero + 3 widgets
