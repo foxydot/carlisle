@@ -1,0 +1,136 @@
+/*
+Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+  clear: both;
+  >.wrap{
+    padding: 2rem 0;
+    border-top: 12px solid #f1f1f3;
+  }
+  .customheader(1.2);
+  a {
+    color: @white;
+  }
+  
+  a:hover {
+    color: @white;
+  }
+  
+  .widget {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .widget-title {
+    font-size: 2.8rem;
+    font-weight: 300;
+  }
+  .widget.gform_widget{
+    background-color: @offwhite;
+    background-image: url(../img/bolt.png);
+    background-repeat: no-repeat;
+    background-position: 1.5rem center;
+    padding-left: 90px;
+    min-height: 130px;
+    font-size: 2rem;
+    .gform_heading,.gform_body,.gform_footer{
+      display: inline-block;
+      position: relative;
+    }
+    .gform_heading{
+      width: 49%;
+      h3.gform_title {
+        color: @red;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+      span.gform_description{
+      }
+    }
+    .gform_body{
+      width: 29%;
+      top: -1.4em;
+      .gform_fields{
+        .gfield{
+          label.gfield_label{
+            display: none;
+          }
+        }
+      }
+    }
+    .gform_footer{
+      width: 19%;
+      top: -1.4em;
+      .button{
+        background-color: @yellow;
+        color: @medgrey;
+      }
+    }
+  }
+  
+  .widget.msd-connected{
+  .connected-text{
+    text-align: center;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .connected-form{
+    input, textarea{
+      background-color: @white;
+      border: 1px solid @vltgrey;
+      padding: 1rem !important;
+    }
+    ::-webkit-input-placeholder {
+   color: @ltgrey;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+       color: @ltgrey;  
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: @ltgrey;  
+    }
+    
+    :-ms-input-placeholder {  
+       color: @ltgrey;  
+    }
+    input[type="submit"],input[type="button"],a.button{
+      .button(@blue);
+    }
+  }
+  }
+  li {
+    list-style-type: none;
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+  }
+  
+  .align-right{
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-size: 1.4rem;
+    .connected-bizname{
+      font-weight: 700;
+    }
+  }
+  h3, h3.gform_title{
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    margin: 10px 0 6px;
+  }
+  .connected-address{
+    span.msdsocial_street{
+      display: block;
+    }
+  }  
+  .search-form input:focus {
+    border: 0 solid #ddd;
+  }
+  
+}

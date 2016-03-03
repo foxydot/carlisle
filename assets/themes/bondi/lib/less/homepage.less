@@ -1,0 +1,71 @@
+@import 'lesshat';
+@import 'mixins';
+
+.site-inner{
+  padding: 0;
+  .content-sidebar-wrap{
+    background-image: url(../img/paul_silhouette.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    main.content{
+      padding-top:4rem;
+      article{
+        header.entry-header{
+          .entry-title{
+            color: @red;
+          }
+        }
+        .entry-content{
+          max-width: 450px;
+          .button{
+            margin-left: 5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.sidebar{
+  .widget.widget_twitter_feed{
+    margin-left: 3rem;
+  }
+}
+
+//Responsiveness
+@media only screen and (max-width: 1169px) {
+  .site-inner{
+    .content-sidebar-wrap{
+      main.content{
+        article{
+          .entry-content{
+            max-width: 33.3vw;
+            .button{
+              margin-left: 5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .site-inner{
+    .content-sidebar-wrap{
+      padding-bottom: 30vw;
+      main.content{
+        article{
+          .entry-content{
+            max-width: 100vw;
+            .button{
+              margin-left: 5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
