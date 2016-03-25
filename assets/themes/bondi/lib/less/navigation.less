@@ -114,49 +114,18 @@ Site Navigation
 
 .nav-primary {
   .customheader(2.4);
-  width: 66%;
-  float: left;
-  margin-top: 5.2rem;
-  text-align: right;
+  background: @offwhite;
   li.menu-item{
     padding: 0;
-    width: 17.75%;
     text-align: center;
-    margin:1%;
+    margin-left:2%;
+    margin-right:2%;
     a{
-      border-bottom: 6px solid @ltgrey;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
       color: @medgrey; 
-      padding: 0.2em 0;  
+      padding: 1em 0;  
       text-transform: uppercase;
-    }
-    &.about a{
-      border-color: @red;
-      &:hover{
-        background-color: @red;
-      }
-    }
-    &.book a{
-      border-color: @ltblue;
-      &:hover{
-        background-color: @ltblue;
-      }
-    }
-    &.blog a{
-      &:hover{
-        background-color: @ltgrey;
-      }
-    }
-    &.events a{
-      border-color: @green;
-      &:hover{
-        background-color: @green;
-      }
-    }
-    &.contact a{
-      border-color: @yellow;
-      &:hover{
-        background-color: @yellow;
-      }
     }
     .sub-menu{
       background-color: @offwhite;
@@ -187,6 +156,7 @@ Site Navigation
   li:hover, li.current-menu-item, li.current-menu-ancestor{
     a, a:hover{
       text-decoration: none;
+      border-bottom: 6px solid @ltgrey;
       }
   }
   li.first-child{
