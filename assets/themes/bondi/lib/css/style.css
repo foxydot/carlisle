@@ -6523,6 +6523,9 @@ Site Header
 .site-header .widget-area .widget .widget-title {
   color: #6B6B6D;
 }
+.site-header .widget-area .widget.widget_nav_menu {
+  clear: right;
+}
 .header-image .site-header .widget-area {
   padding: 0;
 }
@@ -6572,8 +6575,8 @@ Site Navigation
   border: none;
   color: #6B6B6D;
   display: block;
-  padding: 20px;
-  padding: 2rem;
+  padding: 10px;
+  padding: 1rem;
   position: relative;
 }
 .genesis-nav-menu .menu-item a:hover,
@@ -7160,15 +7163,27 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
   clear: both;
+  padding-bottom: 150px;
+  background-color: #e4f0ff;
+  background-image: url(../img/wave.png), linear-gradient(to bottom, #e4f0ff 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.footer-widgets .footer-widgets-1 {
   font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 300;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 45px;
+  font-size: 4.5rem;
   line-height: 1.8;
+  line-height: 2;
+  background: #2470a3;
+  color: #FFF;
+  text-align: center;
 }
-.footer-widgets > .wrap {
-  padding: 2rem 0;
-  border-top: 12px solid #f1f1f3;
+.footer-widgets .footer-widgets-2 .wrap .widget {
+  width: 30%;
+  margin: 0 1.5%;
+  float: left;
 }
 .footer-widgets a {
   color: #FFF;
@@ -7300,12 +7315,14 @@ Footer Widgets
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
+  margin-top: -80px;
   font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 300;
   font-size: 10px;
   font-size: 1rem;
   line-height: 1.8;
   padding: 2rem;
+  color: #FFF;
 }
 .site-footer .wrap {
   position: relative;
@@ -7761,6 +7778,12 @@ div.gform_wrapper .gform_body .gfield.even {
 }
 /* Responsive Design Custom Styles
 ------------------------------------------------------------ */
+/* Very large screens */
+@media only screen and (min-width: 1600px) {
+  .footer-widgets {
+    background-size: 100%,auto;
+  }
+}
 /* Smaller screens */
 @media only screen and (max-width: 801px) {
   /* Enter Your Custom Styles Here */

@@ -1528,6 +1528,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/lib\/img\/wave.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5069,
+		"inputAbbreviatedPath": "\/lib\/img\/wave.png",
+		"outputAbbreviatedPath": "\/lib\/img\/wave.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/lib\/inc\/devel.php": {
 		"fileType": 8192,
 		"ignore": 0,

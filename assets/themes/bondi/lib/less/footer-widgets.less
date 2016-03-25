@@ -4,11 +4,27 @@ Footer Widgets
 
 .footer-widgets {
   clear: both;
-  >.wrap{
-    padding: 2rem 0;
-    border-top: 12px solid #f1f1f3;
+  padding-bottom: 150px;
+  background-color: rgba(228,240,255,1);
+  background-image: url(../img/wave.png),linear-gradient(to bottom,  rgba(228,240,255,1) 0%,rgba(255,255,255,1) 100%);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  .footer-widgets-1{
+    .customheader(4.5);
+    line-height: 2;
+    background: @dkblue;
+    color: @white;
+    text-align: center;
   }
-  .customheader(1.2);
+  .footer-widgets-2{
+    .wrap{
+      .widget{
+        width: 30%;
+        margin: 0 1.5%;
+        float: left;
+      }
+    }
+  }
   a {
     color: @white;
   }

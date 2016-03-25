@@ -103,12 +103,6 @@
 .site-inner {
   padding: 0;
 }
-.site-inner .content-sidebar-wrap {
-  background-image: url(../img/paul_silhouette.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
-}
 .site-inner .content-sidebar-wrap main.content {
   padding-top: 4rem;
 }

@@ -88,6 +88,9 @@ remove_action( 'genesis_after_endwhile', 'genesis_prev_next_post_nav' );
 //add_action( 'genesis_after_endwhile', 'msdlab_prev_next_post_nav' );
 /*** FOOTER ***/
 add_theme_support( 'genesis-footer-widgets', 2 ); //adds automatic footer widgets
+remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
+add_action( 'genesis_before_footer', 'msdlab_footer_widget_areas' );
+
 //add the menu
 //add_action('genesis_before_footer','msdlab_do_footer_menu', 20);
 

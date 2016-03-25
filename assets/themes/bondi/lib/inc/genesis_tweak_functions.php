@@ -8,7 +8,7 @@ function msdlab_make_it_homepage(){
         add_action('genesis_after_header','msdlab_hero');
         remove_action('genesis_before_footer','genesis_footer_widget_areas');
         add_action('genesis_before_footer','msdlab_homepage_widgets',-4);
-        add_action('genesis_before_footer','genesis_footer_widget_areas');
+        add_action('genesis_before_footer','msdlab_footer_widget_areas');
     }
 }
 /**
@@ -396,6 +396,59 @@ function msdlab_maybe_wrap_inner(){
     }
 }
 /*** FOOTER ***/
+
+function msdlab_footer_widget_areas() {
+
+    $footer_widgets = get_theme_support( 'genesis-footer-widgets' );
+
+    if ( ! $footer_widgets || ! isset( $footer_widgets[0] ) || ! is_numeric( $footer_widgets[0] ) )
+        return;
+
+    $footer_widgets = (int) $footer_widgets[0];
+
+    //* Check to see if first widget area has widgets. If not, do nothing. No need to check all footer widget areas.
+    if ( ! is_active_sidebar( 'footer-1' ) )
+        return;
+
+    $inside  = '';
+    $output  = '';
+    $counter = 1;
+
+    while ( $counter <= $footer_widgets ) {
+
+        //* Darn you, WordPress! Gotta output buffer.
+        ob_start();
+        dynamic_sidebar( 'footer-' . $counter );
+        $widgets = ob_get_clean();
+
+        $inside .= sprintf( '<div class="footer-widgets-%d widget-area">%s%s%s</div>', $counter, genesis_structural_wrap( 'footer-widgets', 'open', 0 ), $widgets, genesis_structural_wrap( 'footer-widgets', 'close', 0 ) );
+
+        $counter++;
+
+    }
+
+    if ( $inside ) {
+
+        $output .= genesis_markup( array(
+            'html5'   => '<div %s>' . genesis_sidebar_title( 'Footer' ),
+            'xhtml'   => '<div id="footer-widgets" class="footer-widgets">',
+            'context' => 'footer-widgets',
+            'echo'    => false,
+        ) );
+
+        //$output .= genesis_structural_wrap( 'footer-widgets', 'open', 0 );
+
+        $output .= $inside;
+
+        //$output .= genesis_structural_wrap( 'footer-widgets', 'close', 0 );
+
+        $output .= '</div>';
+
+    }
+
+    echo apply_filters( 'genesis_footer_widget_areas', $output, $footer_widgets );
+
+}
 
 function msdlab_do_footer_widget(){
     if(is_active_sidebar('msdlab_page_footer')){
