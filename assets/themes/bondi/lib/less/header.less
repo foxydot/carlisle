@@ -52,7 +52,7 @@ Site Header
     a {
       .customheader(3.4);
       line-height: 1;
-      font-weight: 500;
+      font-weight: 600;
       display: block;
       &:hover{
         text-decoration: none;
@@ -82,13 +82,14 @@ Site Header
 
 .site-header .widget-area {
   .make-sm-column(6);
+  margin-top: 2rem;
   .clearfix;
     .widget{
       float: right;
       width: auto;
       display: inline-block;
       color: @medgrey;
-      padding: 1em;
+      padding: 0 1em;
       .widget-title{
         color: @medgrey;
       }
@@ -99,7 +100,27 @@ Site Header
   padding: 0;
 }
 
-.site-header .search-form {
-  border: 0;
-  float: right;
+.site-header {
+  form.search-form{
+    position: relative;
+    input[type="search"] {
+      padding: 0.5rem;
+      border: 1px solid @ltgrey;
+    }
+    input[type="submit"] {
+      .fontawesome;
+      font-size: 1.4rem;
+      border: 0;
+      clip: auto;
+      height: auto;
+      margin: 0;
+      padding: 0.5rem;
+      position: absolute;
+      width: auto;
+      background: none;
+      right: 0.5rem;
+      top: 0.1rem;
+      color: @ltgrey;
+    }
+   }
 }
