@@ -1,0 +1,135 @@
+/*
+Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+  color: @dkgrey;
+  clear: both;
+  padding: 0 0 16px;
+  padding: 0 0 1.6rem;
+    .widget_nav_menu{
+      .widget-title{
+        background: fade(@blue, 20%);
+        color: @dkblue;
+        font-weight: bold;
+        padding: 0.5rem;
+      }
+      ul.menu{
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+      }
+    }
+  .wrap:after{
+    .msd-clearfix;
+  }
+}
+/*
+.footer-widgets-1,
+.footer-widgets-2 {
+  width: 33%;
+  margin-right: 3%;
+}
+
+.footer-widgets-3 {
+  width: 25%;
+}
+
+.footer-widgets-1 {
+  margin-right: 6%;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+  margin-top: 40px;
+  margin-top: 4rem;
+  float: left;
+}
+
+.footer-widgets-3 {
+  margin-top: 12px;
+  margin-top: 1.2rem;
+  float: right;
+}
+*/
+
+.footer-widgets {
+  a {
+    color: @dkgreen;
+  }
+  
+  a:hover {
+    color: lighten(@dkgreen, 10%);
+  }
+  
+  .widget {
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+  }
+  
+  .widget-title {
+    color: @white;
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  
+  li {
+    list-style-type: none;
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+  }
+  
+  .search-form input:focus {
+    border: 1px solid #ddd;
+  }
+  
+  .widget.msd-connected{
+    .connected-text{
+  }
+  a{
+    color: @white;
+    opacity: 0.8;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .connected-form{
+    input, textarea{
+      color: @white;
+      background-color: @ltgrey;
+      border: 1px solid darken(@ltgrey, 50%);
+      padding: 1rem !important;
+    }
+    ::-webkit-input-placeholder {
+   color: @white;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+       color: @white;  
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: @white;  
+    }
+    
+    :-ms-input-placeholder {  
+       color: @white;  
+    }
+    .gform_footer{
+      padding-right: 4px;
+    }
+    input[type="submit"],input[type="button"],a.button{
+      .button(@medgrey);
+      margin: 0 auto;
+    }
+    input[type="submit"]:hover,input[type="button"]:hover,a.button:hover{
+      background-color: @blue;
+    }
+  }
+}
+}

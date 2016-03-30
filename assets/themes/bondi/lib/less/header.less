@@ -1,0 +1,129 @@
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+  background-color: @white;
+}
+
+.site-header>.wrap {
+  padding: 40px 0;
+  padding: 4rem 0;
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+  float: left;
+  .customheader();
+  font-weight: 700;
+  padding: 16px 0;
+  padding: 1.6rem 0;
+  width: 33.3%;
+}
+
+.header-image .title-area {
+  padding: 0;
+}
+
+.site-title {
+}
+
+.site-title a,
+.site-title a:hover {
+  color: #333;
+}
+
+.site-description { 
+}
+
+/* Full width header, no widgets */
+.header-image{
+  .title-area{
+    .make-sm-column(6);
+    min-height: 110px;
+    background: url(../img/logo.png) no-repeat center left;
+    margin: 0;
+    padding-left: 120px;
+  }
+  .site-title {
+    margin: 0.8em 0 0;
+    a {
+      .customheader(3.4);
+      line-height: 1;
+      font-weight: 600;
+      display: block;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .site-description {
+    .customheader(2);
+    line-height: 1;
+    font-weight: 100;
+    display: block;
+  }
+}
+
+/* Logo, hide text */
+
+.header-image .site-header>.wrap {
+  .clearfix;
+  padding: 2rem 0;
+}
+
+.header-image .site-title a {
+}
+
+/* Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+  .make-sm-column(6);
+  margin-top: 2rem;
+  .clearfix;
+    .widget{
+      float: right;
+      width: auto;
+      display: inline-block;
+      color: @medgrey;
+      padding: 0 1em;
+      .widget-title{
+        color: @medgrey;
+      }
+      &.widget_nav_menu{
+        clear: right;
+      }
+    }
+}
+
+.header-image .site-header .widget-area {
+  padding: 0;
+}
+
+.site-header {
+  form.search-form{
+    position: relative;
+    input[type="search"] {
+      padding: 0.5rem;
+      border: 1px solid @ltgrey;
+    }
+    input[type="submit"] {
+      .fontawesome;
+      font-size: 1.4rem;
+      border: 0;
+      clip: auto;
+      height: auto;
+      margin: 0;
+      padding: 0.5rem;
+      position: absolute;
+      width: auto;
+      background: none;
+      right: 0.5rem;
+      top: 0.1rem;
+      color: @ltgrey;
+    }
+   }
+}
