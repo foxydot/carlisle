@@ -1,13 +1,13 @@
 <?php 
-if (!class_exists('MSDProjectCPT')) {
-    class MSDProjectCPT {
+if (!class_exists('MSDProductCPT')) {
+    class MSDProductCPT {
         //Properties
-        var $cpt = 'project';
+        var $cpt = 'product';
         //Methods
         /**
         * PHP 4 Compatible Constructor
         */
-        public function MSDProjectCPT(){$this->__construct();}
+        public function MSDProductCPT(){$this->__construct();}
     
         /**
          * PHP 5 Constructor
@@ -18,9 +18,9 @@ if (!class_exists('MSDProjectCPT')) {
             $this->plugin_url = plugin_dir_url('msd-custom-cpt/msd-custom-cpt.php');
             $this->plugin_path = plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php');
             //Actions
-            add_action( 'init', array(&$this,'register_taxonomy_project_type') );
-            add_action( 'init', array(&$this,'register_taxonomy_market_sector') );
-            add_action( 'init', array(&$this,'register_cpt_project') );
+            add_action( 'init', array(&$this,'register_taxonomy_product_type') );
+            add_action( 'init', array(&$this,'register_taxonomy_applications') );
+            add_action( 'init', array(&$this,'register_cpt_product') );
             add_action('admin_head', array(&$this,'plugin_header'));
             add_action('admin_print_scripts', array(&$this,'add_admin_scripts') );
             add_action('admin_print_styles', array(&$this,'add_admin_styles') );
@@ -33,24 +33,24 @@ if (!class_exists('MSDProjectCPT')) {
             add_filter( 'enter_title_here', array(&$this,'change_default_title') );
         }
 
-        function register_taxonomy_project_type(){
+        function register_taxonomy_product_type(){
             
             $labels = array( 
-                'name' => _x( 'Project types', 'project-types' ),
-                'singular_name' => _x( 'Project type', 'project-types' ),
-                'search_items' => _x( 'Search project types', 'project-types' ),
-                'popular_items' => _x( 'Popular project types', 'project-types' ),
-                'all_items' => _x( 'All project types', 'project-types' ),
-                'parent_item' => _x( 'Parent project type', 'project-types' ),
-                'parent_item_colon' => _x( 'Parent project type:', 'project-types' ),
-                'edit_item' => _x( 'Edit project type', 'project-types' ),
-                'update_item' => _x( 'Update project type', 'project-types' ),
-                'add_new_item' => _x( 'Add new project type', 'project-types' ),
-                'new_item_name' => _x( 'New project type name', 'project-types' ),
-                'separate_items_with_commas' => _x( 'Separate project types with commas', 'project-types' ),
-                'add_or_remove_items' => _x( 'Add or remove project types', 'project-types' ),
-                'choose_from_most_used' => _x( 'Choose from the most used project types', 'project-types' ),
-                'menu_name' => _x( 'Project types', 'project-types' ),
+                'name' => _x( 'Product types', 'product-types' ),
+                'singular_name' => _x( 'Product type', 'product-types' ),
+                'search_items' => _x( 'Search product types', 'product-types' ),
+                'popular_items' => _x( 'Popular product types', 'product-types' ),
+                'all_items' => _x( 'All product types', 'product-types' ),
+                'parent_item' => _x( 'Parent product type', 'product-types' ),
+                'parent_item_colon' => _x( 'Parent product type:', 'product-types' ),
+                'edit_item' => _x( 'Edit product type', 'product-types' ),
+                'update_item' => _x( 'Update product type', 'product-types' ),
+                'add_new_item' => _x( 'Add new product type', 'product-types' ),
+                'new_item_name' => _x( 'New product type name', 'product-types' ),
+                'separate_items_with_commas' => _x( 'Separate product types with commas', 'product-types' ),
+                'add_or_remove_items' => _x( 'Add or remove product types', 'product-types' ),
+                'choose_from_most_used' => _x( 'Choose from the most used product types', 'product-types' ),
+                'menu_name' => _x( 'Product types', 'product-types' ),
             );
         
             $args = array( 
@@ -61,31 +61,31 @@ if (!class_exists('MSDProjectCPT')) {
                 'show_tagcloud' => false,
                 'hierarchical' => true, //we want a "category" style taxonomy, but may have to restrict selection via a dropdown or something.
         
-                'rewrite' => array('slug'=>'project-type','with_front'=>false),
+                'rewrite' => array('slug'=>'product-type','with_front'=>false),
                 'query_var' => true
             );
         
-            register_taxonomy( 'project_type', array($this->cpt), $args );
+            register_taxonomy( 'product_type', array($this->cpt), $args );
         }
 
-        function register_taxonomy_market_sector(){
+        function register_taxonomy_applications(){
             
             $labels = array( 
-                'name' => _x( 'Market sectors', 'market-sectors' ),
-                'singular_name' => _x( 'Market sector', 'market-sectors' ),
-                'search_items' => _x( 'Search market sectors', 'market-sectors' ),
-                'popular_items' => _x( 'Popular market sectors', 'market-sectors' ),
-                'all_items' => _x( 'All market sectors', 'market-sectors' ),
-                'parent_item' => _x( 'Parent market sector', 'market-sectors' ),
-                'parent_item_colon' => _x( 'Parent market sector:', 'market-sectors' ),
-                'edit_item' => _x( 'Edit market sector', 'market-sectors' ),
-                'update_item' => _x( 'Update market sector', 'market-sectors' ),
-                'add_new_item' => _x( 'Add new market sector', 'market-sectors' ),
-                'new_item_name' => _x( 'New market sector name', 'market-sectors' ),
-                'separate_items_with_commas' => _x( 'Separate market sectors with commas', 'market-sectors' ),
-                'add_or_remove_items' => _x( 'Add or remove market sectors', 'market-sectors' ),
-                'choose_from_most_used' => _x( 'Choose from the most used market sectors', 'market-sectors' ),
-                'menu_name' => _x( 'Market sectors', 'market-sectors' ),
+                'name' => _x( 'Applications', 'applications' ),
+                'singular_name' => _x( 'Application', 'applications' ),
+                'search_items' => _x( 'Search applications', 'applications' ),
+                'popular_items' => _x( 'Popular applications', 'applications' ),
+                'all_items' => _x( 'All applications', 'applications' ),
+                'parent_item' => _x( 'Parent application', 'applications' ),
+                'parent_item_colon' => _x( 'Parent application:', 'applications' ),
+                'edit_item' => _x( 'Edit application', 'applications' ),
+                'update_item' => _x( 'Update application', 'applications' ),
+                'add_new_item' => _x( 'Add new application', 'applications' ),
+                'new_item_name' => _x( 'New application name', 'applications' ),
+                'separate_items_with_commas' => _x( 'Separate applications with commas', 'applications' ),
+                'add_or_remove_items' => _x( 'Add or remove applications', 'applications' ),
+                'choose_from_most_used' => _x( 'Choose from the most used applications', 'applications' ),
+                'menu_name' => _x( 'Applications', 'applications' ),
             );
         
             $args = array( 
@@ -96,36 +96,36 @@ if (!class_exists('MSDProjectCPT')) {
                 'show_tagcloud' => false,
                 'hierarchical' => true, //we want a "category" style taxonomy, but may have to restrict selection via a dropdown or something.
         
-                'rewrite' => array('slug'=>'market-sector','with_front'=>false),
+                'rewrite' => array('slug'=>'application','with_front'=>false),
                 'query_var' => true
             );
         
             register_taxonomy( 'market_sector', array($this->cpt), $args );
         }
         
-        function register_cpt_project() {
+        function register_cpt_product() {
         
             $labels = array( 
-                'name' => _x( 'Projects', 'project' ),
-                'singular_name' => _x( 'Project', 'project' ),
-                'add_new' => _x( 'Add New', 'project' ),
-                'add_new_item' => _x( 'Add New Project', 'project' ),
-                'edit_item' => _x( 'Edit Project', 'project' ),
-                'new_item' => _x( 'New Project', 'project' ),
-                'view_item' => _x( 'View Project', 'project' ),
-                'search_items' => _x( 'Search Project', 'project' ),
-                'not_found' => _x( 'No project found', 'project' ),
-                'not_found_in_trash' => _x( 'No project found in Trash', 'project' ),
-                'parent_item_colon' => _x( 'Parent Project:', 'project' ),
-                'menu_name' => _x( 'Project', 'project' ),
+                'name' => _x( 'Products', 'product' ),
+                'singular_name' => _x( 'Product', 'product' ),
+                'add_new' => _x( 'Add New', 'product' ),
+                'add_new_item' => _x( 'Add New Product', 'product' ),
+                'edit_item' => _x( 'Edit Product', 'product' ),
+                'new_item' => _x( 'New Product', 'product' ),
+                'view_item' => _x( 'View Product', 'product' ),
+                'search_items' => _x( 'Search Product', 'product' ),
+                'not_found' => _x( 'No product found', 'product' ),
+                'not_found_in_trash' => _x( 'No product found in Trash', 'product' ),
+                'parent_item_colon' => _x( 'Parent Product:', 'product' ),
+                'menu_name' => _x( 'Product', 'product' ),
             );
         
             $args = array( 
                 'labels' => $labels,
-                'hierarchical' => false,
-                'description' => 'Project',
+                'hierarchical' => true,
+                'description' => 'Product',
                 'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
-                'taxonomies' => array( 'category', 'project_type', 'market_sector' ),
+                'taxonomies' => array( 'product_type', 'market_sector' ),
                 'public' => true,
                 'show_ui' => true,
                 'show_in_menu' => true,
@@ -137,7 +137,7 @@ if (!class_exists('MSDProjectCPT')) {
                 'has_archive' => true,
                 'query_var' => true,
                 'can_export' => true,
-                'rewrite' => array('slug'=>'project','with_front'=>false),
+                'rewrite' => array('slug'=>'product','with_front'=>false),
                 'capability_type' => 'post'
             );
         
@@ -196,7 +196,7 @@ if (!class_exists('MSDProjectCPT')) {
         function change_default_title( $title ){
             global $current_screen;
             if  ( $current_screen->post_type == $this->cpt ) {
-                return __('Project Title','project');
+                return __('Product Name','product');
             } else {
                 return $title;
             }
@@ -215,23 +215,20 @@ if (!class_exists('MSDProjectCPT')) {
 
         function custom_query( $query ) {
             if(!is_admin()){
-                $is_project = ($query->query_vars['project_type'])?TRUE:FALSE;
+                $is_product = ($query->query_vars['product_type'])?TRUE:FALSE;
                 if($query->is_main_query() && $query->is_search){
-                    $searchterm = $query->query_vars['s'];
-                    // we have to remove the "s" parameter from the query, because it will prevent the posts from being found
-                    $query->query_vars['s'] = "";
-                    
-                    if ($searchterm != "") {
-                        $query->set('meta_value',$searchterm);
-                        $query->set('meta_compare','LIKE');
-                    };
-                    $query->set( 'post_type', array('post','page',$this->cpt) );
-                    ts_data($query);
+                    $post_types = $query->query_vars['post_type'];
+                    if(count($post_types)==0){
+                        $post_types[] = 'post';
+                        $post_types[] = 'page';
+                    }
+                    $post_types[] = $this->cpt;
+                    $query->set( 'post_type', $post_types );
                 }
-                elseif( $query->is_main_query() && $query->is_archive ) {
+                elseif( $query->is_main_query() && $query->is_archive && $is_product ) {
                     $query->set( 'post_type', array('post','page',$this->cpt) );
                 }
             }
-        }           
+        }          
   } //End Class
 } //End if class exists statement
