@@ -2,8 +2,8 @@
 /*
 Plugin Name: MSD Specialty Pages
 Description: Framework to create specialty templated pages with custom backends. Currently supports two types of LayerCake design structures.
-Author: Catherine Sandrick
-Version: 0.0.5
+Author: MSDLAB
+Version: 0.2.3
 Author URI: http://msdlab.com
 */
 
@@ -12,7 +12,7 @@ if(!class_exists('GitHubPluginUpdater')){
 }
 
 if ( is_admin() ) {
-    new GitHubPluginUpdater( __FILE__, 'msdlab', "msd_site_settings" );
+    new GitHubPluginUpdater( __FILE__, 'msdlab', "msd-specialty-pages" );
 }
 
 if(!class_exists('WPAlchemy_MetaBox')){
@@ -92,10 +92,6 @@ if (!class_exists('MSDCustomPages')) {
          */
         var $options = array();
         //Methods
-        /**
-        * PHP 4 Compatible Constructor
-        */
-        function MSDCustomPages(){$this->__construct();}
         
         /**
         * PHP 5 Constructor
@@ -113,6 +109,10 @@ if (!class_exists('MSDCustomPages')) {
             //here are some examples to get started with
             if(class_exists('PageTemplater')){
                 add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
+            }
+            if(class_exists('MSDSimpleSectionedPage')){
+                add_action('admin_print_footer_scripts',array('MSDSimpleSectionedPage','info_footer_hook') ,100);     
+                add_action('admin_enqueue_scripts',array('MSDSimpleSectionedPage','enqueue_admin')); 
             }
             if(class_exists('MSDSectionedPage')){
                 add_action('admin_print_footer_scripts',array('MSDSectionedPage','info_footer_hook') ,100);     
@@ -174,3 +174,18 @@ if (!class_exists('MSDCustomPages')) {
 
 //instantiate
 $msd_custom_pages = new MSDCustomPages();
+
+if(!function_exists('get_attachment_id_from_src')){
+    function get_attachment_id_from_src ($src) {
+      global $wpdb;
+      $reg = "/-[0-9]+x[0-9]+?.(jpg|jpeg|png|gif)$/i";
+      $src1 = preg_replace($reg,'',$src);
+      if($src1 != $src){
+          $ext = pathinfo($src, PATHINFO_EXTENSION);
+          $src = $src1 . '.' .$ext;
+      }
+      $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$src'";
+      $id = $wpdb->get_var($query);
+      return $id;
+    }
+}
