@@ -52,7 +52,7 @@ function column_shortcode($atts, $content = null){
 		case 'last':
 			$classes[] = 'last';
 	}
-	return '<div class="'.implode(' ',$classes).'">'.$content.'</div>';
+	return '<div class="'.implode(' ',$classes).'">'.do_shortcode($content).'</div>';
 }
 add_shortcode('mailto','msdlab_mailto_function');
 function msdlab_mailto_function($atts, $content){

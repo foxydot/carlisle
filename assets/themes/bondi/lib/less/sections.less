@@ -21,38 +21,40 @@
 }
 .sectioned-page-wrapper{
   .section{
-    background-repeat: no-repeat;
-    padding: 0;
-    position: relative;
     .section-subtitle,h4{
-      .customheader(1.8);
-      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      .customheader(3);
+      font-weight: 200;
+      text-align: center;
       color: @medgrey;
       line-height: 1.25;
-      margin: 0;
-    }
-    .section-subtitle{
-      margin-bottom: 2rem;
     }
       h3{
       .customheader(1.8);
-      font-weight: 300;
+      font-weight: 200;
       color: @medgrey;
       line-height: 1.25;
       margin-bottom: 0.5em;
       }
-    .section-title h3{
-      .customheader(2.4);
-      font-weight: 300;
-      text-align: center;
-      color: @medgrey;
-      padding-top: 2rem;
-      margin: 0 auto;
+    .section-title{ 
+      h3{
+        .customheader(4.2);
+        font-weight: 500;
+        text-align: center;
+        color: @blue;
+        margin: 0 auto;
+      }
     }
     .section-body{
       .wrap{
-        padding: 2rem 0;
-        img{}
+        .section-header-area{}
+        .row{
+          .section-content{
+            .custombody(1.8);
+          }
+        }
+        .section-footer-area{}
       }
     &:after{
       .msd-clearfix;

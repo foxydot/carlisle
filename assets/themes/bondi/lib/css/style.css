@@ -7366,48 +7366,48 @@ Site Footer
 .page-template-page-sectioned .site-container .site-inner .content-sidebar-wrap main article .entry-header .entry-title {
   display: none;
 }
-.sectioned-page-wrapper .section {
-  background-repeat: no-repeat;
-  padding: 0;
-  position: relative;
-}
 .sectioned-page-wrapper .section .section-subtitle,
 .sectioned-page-wrapper .section h4 {
+  max-width: 800px;
+  margin: 0 auto 3rem;
   font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1.8;
   font-weight: 300;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 1.8;
+  font-weight: 200;
+  text-align: center;
   color: #6B6B6D;
   line-height: 1.25;
-  margin: 0;
-}
-.sectioned-page-wrapper .section .section-subtitle {
-  margin-bottom: 2rem;
 }
 .sectioned-page-wrapper .section h3 {
   font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 300;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 200;
   color: #6B6B6D;
   line-height: 1.25;
   margin-bottom: 0.5em;
 }
 .sectioned-page-wrapper .section .section-title h3 {
   font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 1.8;
   font-weight: 300;
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1.8;
+  font-weight: 500;
   text-align: center;
-  color: #6B6B6D;
-  padding-top: 2rem;
+  color: #54A4D9;
   margin: 0 auto;
 }
-.sectioned-page-wrapper .section .section-body .wrap {
-  padding: 2rem 0;
+.sectioned-page-wrapper .section .section-body .wrap .row .section-content {
+  font-family: "Montserrat", "Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 .sectioned-page-wrapper .section .section-body:after {
   content: ".";
@@ -7767,6 +7767,17 @@ Site Footer
 }
 div.gform_wrapper .gform_body .gfield.even {
   background-color: transparent;
+}
+div.one-fifth {
+  width: 18%;
+  margin: 0 1%;
+  float: left;
+}
+div.one-fifth.first-child {
+  margin-left: 0;
+}
+div.one-fifth.last-child {
+  margin-right: 0;
 }
 .nav-responsive ul,
 .nav-responsive li,

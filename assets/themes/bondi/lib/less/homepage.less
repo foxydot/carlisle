@@ -2,66 +2,53 @@
 @import 'mixins';
 
 .site-inner{
+  display: none;
   padding: 0;
-  .content-sidebar-wrap{
-    main.content{
-      padding-top:4rem;
-      article{
-        header.entry-header{
-          .entry-title{
-            color: @red;
-          }
-        }
-        .entry-content{
-          max-width: 450px;
-          .button{
-            margin-left: 5em;
-          }
+  margin: 0;
+}
+
+.sectioned-page-wrapper{
+  .section{
+    padding: 4rem 0;
+    background-size: cover;
+    a,a:link,a:visited,a:active{
+      color:@dkgrey;
+    }
+    &.section-layer-slider-layer{
+      margin: 0;
+      padding: 0;
+    }
+    &.section-primary-markets{
+      text-align: center;
+      font-size: 1.4rem;
+      h4{
+        font-size: 2rem;
+        font-weight: 500;
+        color: @black;
+        &:after{
+          content: '';
+          border-bottom: 1px solid @red;
+          display: block;
+          width: 70%;
+          margin: 1rem auto;
         }
       }
     }
-  }
-}
-
-
-.sidebar{
-  .widget.widget_twitter_feed{
-    margin-left: 3rem;
+    &.section-feature-product{
+      color: @white;
+      .section-title h3, .section-subtitle, h4{
+        color: @white;
+        max-width: 900px;
+      }
+    }
   }
 }
 
 //Responsiveness
 @media only screen and (max-width: 1169px) {
-  .site-inner{
-    .content-sidebar-wrap{
-      main.content{
-        article{
-          .entry-content{
-            max-width: 33.3vw;
-            .button{
-              margin-left: 5em;
-            }
-          }
-        }
-      }
-    }
-  }
+
 }
 
 @media only screen and (max-width: 550px) {
-  .site-inner{
-    .content-sidebar-wrap{
-      padding-bottom: 30vw;
-      main.content{
-        article{
-          .entry-content{
-            max-width: 100vw;
-            .button{
-              margin-left: 5em;
-            }
-          }
-        }
-      }
-    }
-  }
+
 }
