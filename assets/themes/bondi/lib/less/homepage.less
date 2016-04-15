@@ -11,6 +11,10 @@
   .section{
     padding: 4rem 0;
     background-size: cover;
+      color: @medgrey;
+    .section-body .wrap .row .section-content{
+      line-height: 1.2;
+    }
     a,a:link,a:visited,a:active{
       color:@dkgrey;
     }
@@ -33,12 +37,79 @@
           margin: 1rem auto;
         }
       }
+      .one-fifth{
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3){
+        h4{
+          margin-top: 1.25em;
+        }
+        }
+      }
     }
     &.section-feature-product{
       color: @white;
       .section-title h3, .section-subtitle, h4{
         color: @white;
         max-width: 900px;
+      }
+      .section-content{
+        text-align: left;
+        h4{
+          text-align: left;
+          font-size: 2.4rem;
+          font-weight: 600;
+        }
+        ul{
+          border-bottom: 1px dashed @white;
+          margin-bottom: 1em;
+          li{
+            list-style: none outside none;
+            width: auto;
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0 1rem;
+            font-size: 1.25em;
+            line-height: 1.2;
+            strong{
+              display: block;
+            }
+            &.first-child{
+              max-width: 40%;
+              border-right: 2px solid fade(@blue,50%);
+              text-transform: uppercase;
+              strong{
+                font-size: 1.5em;
+              }
+            }
+            &.last-child{
+              max-width: 60%;
+              font-size: 1.65em;
+              strong{
+                font-size: 0.85em;
+              }
+            }
+          }
+        }
+        a{
+          clear: both;
+        }
+      }
+    }
+    &.section-about{
+      .column-3{
+        border-left: 1px solid @offwhite;
+      }
+      .section-content h4{
+        font-weight: 500;
+        margin-bottom: 0.4em;
+        text-align: left;
+      }
+    }
+    &.section-news{
+      .section-content h4{
+        font-weight: 400;
+        font-size: 2.4rem;
       }
     }
   }

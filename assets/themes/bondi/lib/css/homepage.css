@@ -108,6 +108,10 @@
 .sectioned-page-wrapper .section {
   padding: 4rem 0;
   background-size: cover;
+  color: #6B6B6D;
+}
+.sectioned-page-wrapper .section .section-body .wrap .row .section-content {
+  line-height: 1.2;
 }
 .sectioned-page-wrapper .section a,
 .sectioned-page-wrapper .section a:link,
@@ -135,6 +139,11 @@
   width: 70%;
   margin: 1rem auto;
 }
+.sectioned-page-wrapper .section.section-primary-markets .one-fifth:nth-child(1) h4,
+.sectioned-page-wrapper .section.section-primary-markets .one-fifth:nth-child(2) h4,
+.sectioned-page-wrapper .section.section-primary-markets .one-fifth:nth-child(3) h4 {
+  margin-top: 1.25em;
+}
 .sectioned-page-wrapper .section.section-feature-product {
   color: #FFF;
 }
@@ -143,4 +152,58 @@
 .sectioned-page-wrapper .section.section-feature-product h4 {
   color: #FFF;
   max-width: 900px;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content {
+  text-align: left;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content h4 {
+  text-align: left;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul {
+  border-bottom: 1px dashed #FFF;
+  margin-bottom: 1em;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul li {
+  list-style: none outside none;
+  width: auto;
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul li strong {
+  display: block;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul li.first-child {
+  max-width: 40%;
+  border-right: 2px solid rgba(84, 164, 217, 0.5);
+  text-transform: uppercase;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul li.first-child strong {
+  font-size: 1.5em;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul li.last-child {
+  max-width: 60%;
+  font-size: 1.65em;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content ul li.last-child strong {
+  font-size: 0.85em;
+}
+.sectioned-page-wrapper .section.section-feature-product .section-content a {
+  clear: both;
+}
+.sectioned-page-wrapper .section.section-about .column-3 {
+  border-left: 1px solid #F1F1F3;
+}
+.sectioned-page-wrapper .section.section-about .section-content h4 {
+  font-weight: 500;
+  margin-bottom: 0.4em;
+  text-align: left;
+}
+.sectioned-page-wrapper .section.section-news .section-content h4 {
+  font-weight: 400;
+  font-size: 2.4rem;
 }
