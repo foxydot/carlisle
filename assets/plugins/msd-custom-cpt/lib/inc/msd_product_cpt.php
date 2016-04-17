@@ -18,6 +18,7 @@ if (!class_exists('MSDProductCPT')) {
             $this->plugin_url = plugin_dir_url('msd-custom-cpt/msd-custom-cpt.php');
             $this->plugin_path = plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php');
             //Actions
+            add_action( 'init', array(&$this,'add_metaboxes') );
             add_action( 'init', array(&$this,'register_taxonomy_product_type') );
             add_action( 'init', array(&$this,'register_taxonomy_applications') );
             add_action( 'init', array(&$this,'register_cpt_product') );
@@ -32,6 +33,24 @@ if (!class_exists('MSDProductCPT')) {
             add_filter( 'pre_get_posts', array(&$this,'custom_query') );
             add_filter( 'enter_title_here', array(&$this,'change_default_title') );
         }
+
+
+        
+    function add_metaboxes(){
+        global $product_options,$wpalchemy_media_access;
+        $product_options = new WPAlchemy_MetaBox(array
+        (
+            'id' => '_product_options',
+            'title' => 'Product Options',
+            'types' => array('product'),
+            'context' => 'normal',
+            'priority' => 'high',
+            'template' => WP_PLUGIN_DIR.'/'.plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php').'lib/template/product-options.php',
+            'autosave' => TRUE,
+            'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
+            'prefix' => '_product_' // defaults to NULL
+        ));
+    }
 
         function register_taxonomy_product_type(){
             
@@ -100,7 +119,7 @@ if (!class_exists('MSDProductCPT')) {
                 'query_var' => true
             );
         
-            register_taxonomy( 'market_sector', array($this->cpt), $args );
+            register_taxonomy( 'application', array($this->cpt), $args );
         }
         
         function register_cpt_product() {
@@ -125,7 +144,7 @@ if (!class_exists('MSDProductCPT')) {
                 'hierarchical' => true,
                 'description' => 'Product',
                 'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
-                'taxonomies' => array( 'product_type', 'market_sector' ),
+                'taxonomies' => array( 'product_type', 'application' ),
                 'public' => true,
                 'show_ui' => true,
                 'show_in_menu' => true,
@@ -154,9 +173,8 @@ if (!class_exists('MSDProductCPT')) {
             global $current_screen;
             if($current_screen->post_type == $this->cpt){
                 wp_enqueue_script('media-upload');
-                wp_enqueue_script('thickbox');
-                wp_register_script('my-upload', plugin_dir_url(dirname(__FILE__)).'/js/msd-upload-file.js', array('jquery','media-upload','thickbox'),FALSE,TRUE);
-                wp_enqueue_script('my-upload');
+                wp_enqueue_script('jquery-ui-core');
+                wp_enqueue_script('sectioned-admin',plugin_dir_url(dirname(__FILE__)).'/js/product-input.js',array('jquery'));
             }
         }
         
@@ -165,6 +183,7 @@ if (!class_exists('MSDProductCPT')) {
             if($current_screen->post_type == $this->cpt){
                 wp_enqueue_style('thickbox');
                 wp_enqueue_style('custom_meta_css',plugin_dir_url(dirname(__FILE__)).'/css/meta.css');
+                wp_enqueue_style('jqueryui_smoothness','//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css');
             }
         }   
             
