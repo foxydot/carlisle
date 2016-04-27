@@ -150,4 +150,30 @@ Footer Widgets
     border: 0 solid #ddd;
   }
   
+  .widget.widget_nav_menu{
+    .wrap();
+    text-align: left;
+    ul.menu{
+      font-size: 0.9em;
+      line-height: 1.25;
+      >li{
+        margin-top: 1em;
+        >a{
+          color: @blue;
+          font-weight: 500;
+        }
+        .sub-menu{
+        font-size: 0.9em;
+          li{
+            a{
+              color: @blue;
+            }
+          }
+        }
+        &.first-child{
+          display: none;
+        }
+      }
+    }
+  }
 }

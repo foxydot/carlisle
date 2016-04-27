@@ -19,7 +19,6 @@ function msdlab_get_excerpt( $post_id, $excerpt_length = 50, $trailing_character
     $the_excerpt = implode( ' ', $words ) . '<a href="'.get_permalink($post_id).'">'.$trailing_character.'</a>';
     return $the_excerpt;
 }
-
 // cleanup tinymce for SEO
 function fb_change_mce_buttons( $initArray ) {
 	//@see http://wiki.moxiecode.com/index.php/TinyMCE:Control_reference
