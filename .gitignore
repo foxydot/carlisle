@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-=======
 # This is a template .gitignore file for git-managed WordPress projects.
 #
 # Fact: you don't want WordPress core files, or your server-specific
@@ -71,24 +44,45 @@ assets/themes/twenty*
 assets/themes/genesis
 wp-content/themes/twenty*
 wp-content/themes/genesis
->>>>>>> 2fde79aecdffeb9bbc8a113bca1e0dccad2785ea
 
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+=======
 .DS_Store
 .AppleDouble
 .LSOverride
-<<<<<<< HEAD
 =======
 Icon
 *.zip
 *.tar.gz
 *.tar.bz
 
->>>>>>> 2fde79aecdffeb9bbc8a113bca1e0dccad2785ea
-
 # Thumbnails
 ._*
 
-<<<<<<< HEAD
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -134,4 +128,5 @@ local.properties
 
 # PDT-specific
 .buildpath
->>>>>>> 2fde79aecdffeb9bbc8a113bca1e0dccad2785ea
+
+config.codekit

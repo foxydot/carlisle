@@ -131,9 +131,11 @@ Site Navigation
       .sub-menu{
         background-color: @offwhite;
         margin-top: 0px;
-        margin-left: 4rem;
+        margin-left: 0px;
+        min-width: 200px;
         .box-shadow(0 6px 6px rgba(20,20,20,0.5));
         li.menu-item{
+          margin: 0;
           padding: 0 2rem;
           width: 100%;
           border-bottom: 1px solid @offwhite;
@@ -141,8 +143,11 @@ Site Navigation
             background-color: transparent;
             border: 0;
             color: @medgrey;
-            padding: 1rem 0;
+            padding: 0.25em 0;
             width: 100%;
+            text-align: left;
+            text-transform: none;
+            line-height: 1.25;
           }
         }
         li.last-child>a{

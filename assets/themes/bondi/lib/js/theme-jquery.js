@@ -24,6 +24,10 @@ jQuery(document).ready(function($) {
             return '<li class="separator">|</li>';
         }
     });
+    
+    $('.nav-primary .menu>li.menu-item>.sub-menu').css('width',function(){
+        return $(this).parent('.menu-item').width() + 'px';
+    });
 	
 	$('.section.expandable .expand').click(function(){
 	    var target = $(this).parents('.section-body').find('.content');
