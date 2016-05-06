@@ -2736,6 +2736,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/single-product.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/single-product.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/style.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -2748,7 +2757,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Catherine OBrien",
+"lastSavedByUser": "Catherine M OBrien",
 "manualImportLinks": {
 	},
 "projectAttributes": {

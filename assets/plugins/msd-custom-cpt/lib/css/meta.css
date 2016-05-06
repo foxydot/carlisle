@@ -87,6 +87,11 @@
   margin: 15px 6px;
   text-transform: uppercase;
 }
+#msdlab_meta_control h2 {
+  padding: 0.5em;
+  border: 1px #CCC solid;
+  border-radius: 5px;
+}
 #msdlab_meta_control .table {
   display: block;
   width: 100%;
@@ -152,6 +157,12 @@
 #msdlab_meta_control .cell .input_container select.small,
 #msdlab_meta_control .cell .input_container .wp-editor-wrap.small {
   max-width: 80px;
+}
+#msdlab_meta_control .cell .input_container textarea.hidden,
+#msdlab_meta_control .cell .input_container input[type='text'].hidden,
+#msdlab_meta_control .cell .input_container select.hidden,
+#msdlab_meta_control .cell .input_container .wp-editor-wrap.hidden {
+  display: none;
 }
 #msdlab_meta_control .even {
   background: #eee;

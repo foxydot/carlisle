@@ -41,7 +41,7 @@ if (!class_exists('MSDProductCPT')) {
         $product_options = new WPAlchemy_MetaBox(array
         (
             'id' => '_product_options',
-            'title' => 'Product Options',
+            'title' => 'Product Extras',
             'types' => array('product'),
             'context' => 'normal',
             'priority' => 'high',
