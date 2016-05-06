@@ -9,30 +9,45 @@ global $wpalchemy_media_access;
 <div class="msdlab_meta_control" id="msdlab_meta_control">
     <div class="table">
     <div class="cell file">
-        <label>PDF Wiring</label>
+        <?php $mb->the_field('pdf-alpha-main-label'); ?>
+        <label>PDF Alpha Label</label>            
         <div class="input_container">
-            <?php $mb->the_field('pdf-wiring-main'); ?>
-            <?php $group_name = 'pdf-wiring-main'; ?>
+            <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+        </div>
+        <label>PDF Alpha File</label>
+        <div class="input_container">
+            <?php $mb->the_field('pdf-alpha-main'); ?>
+            <?php $group_name = 'pdf-alpha-main'; ?>
             <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
             <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
             <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
         </div>
     </div>
     <div class="cell file">
-        <label>PDF Drawing Specifications</label>
+        <?php $mb->the_field('pdf-beta-main-label'); ?>
+        <label>PDF Beta Label</label>            
         <div class="input_container">
-            <?php $mb->the_field('pdf-spec-main'); ?>
-            <?php $group_name = 'pdf-spec-main'; ?>
+            <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+        </div>
+        <label>PDF Beta File</label>
+        <div class="input_container">
+            <?php $mb->the_field('pdf-beta-main'); ?>
+            <?php $group_name = 'pdf-beta-main'; ?>
             <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
             <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
             <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
         </div>
     </div>
     <div class="cell file">
-        <label>PDF Product Brochure</label>
+        <?php $mb->the_field('pdf-gamma-main-label'); ?>
+        <label>PDF Gamma Label</label>            
         <div class="input_container">
-            <?php $mb->the_field('pdf-brochure-main'); ?>
-            <?php $group_name = 'pdf-brochure-main'; ?>
+            <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+        </div>
+        <label>PDF Gamma File</label>
+        <div class="input_container">
+            <?php $mb->the_field('pdf-gamma-main'); ?>
+            <?php $group_name = 'pdf-gamma-main'; ?>
             <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
             <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
             <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
@@ -131,30 +146,45 @@ global $wpalchemy_media_access;
                 </div>
             </div>
             <div class="cell file">
-                <label>PDF Wiring</label>
+                <?php $mb->the_field('pdf-alpha-label'); ?>
+                <label>PDF Alpha Label</label>            
                 <div class="input_container">
-                    <?php $mb->the_field('pdf-wiring'); ?>
-                    <?php $group_name = 'pdf-wiring-'. $mb->get_the_index(); ?>
+                    <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+                </div>
+                <label>PDF Alpha File</label>
+                <div class="input_container">
+                    <?php $mb->the_field('pdf-alpha'); ?>
+                    <?php $group_name = 'pdf-alpha-'. $mb->get_the_index(); ?>
                     <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
                     <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
                     <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
                 </div>
             </div>
             <div class="cell file">
-                <label>PDF Drawing Specifications</label>
+                <?php $mb->the_field('pdf-beta-label'); ?>
+                <label>PDF Beta Label</label>            
                 <div class="input_container">
-                    <?php $mb->the_field('pdf-spec'); ?>
-                    <?php $group_name = 'pdf-spec-'. $mb->get_the_index(); ?>
+                    <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+                </div>
+                <label>PDF Beta File</label>
+                <div class="input_container">
+                    <?php $mb->the_field('pdf-beta'); ?>
+                    <?php $group_name = 'pdf-beta-'. $mb->get_the_index(); ?>
                     <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
                     <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
                     <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
                 </div>
             </div>
             <div class="cell file">
-                <label>PDF Product Brochure</label>
+                <?php $mb->the_field('pdf-gamma-label'); ?>
+                <label>PDF Gamma Label</label>            
                 <div class="input_container">
-                    <?php $mb->the_field('pdf-brochure'); ?>
-                    <?php $group_name = 'pdf-brochure-'. $mb->get_the_index(); ?>
+                    <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+                </div>
+                <label>PDF Gamma File</label>
+                <div class="input_container">
+                    <?php $mb->the_field('pdf-gamma'); ?>
+                    <?php $group_name = 'pdf-gamma-'. $mb->get_the_index(); ?>
                     <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
                     <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
                     <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>

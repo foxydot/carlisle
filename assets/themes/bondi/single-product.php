@@ -42,14 +42,15 @@ function bondi_pdf_files(){
     global $product_options,$wpalchemy_media_access;
     global $application_path;
     $product_options->the_meta();
-    $types = array('pdf-wiring' => 'Wiring Dimensions','pdf-spec' => 'Drawings Specifications','pdf-brochure' => 'Product Brochure');
-    foreach($types AS $k => $v){
+    $types = array('alpha','beta','gamma');
+    foreach($types AS $t){
         if($application_path){
         
         } else {
-            $file = $product_options->get_the_value($k.'-main');
+            $file = $product_options->get_the_value('pdf-'.$t.'-main');
             if($file){
-                print '<a class="pdf-button" href="'.$file.'">'.$v.'</a>';
+                $label = $product_options->get_the_value('pdf-'.$t.'-main-label');
+                print '<a class="pdf-button" href="'.$file.'">'.$label.'</a>';
             }
         }
     }
