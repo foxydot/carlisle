@@ -224,3 +224,23 @@ div.one-fifth{
     margin-right: 0;
   }
 }
+
+.entry-footer{
+  clear: both;
+  a.pdf-button{
+    .button(@red);
+    margin: 0 0.5em;
+    display: inline-block;
+    width: 10em;
+    line-height: 1;
+    &:before{
+      .fontawesome;
+      font-size: 2em;
+      content: '\f1c1';
+      margin-right: 0.5em;
+      line-height: 1;
+      display: block;
+      float: left;
+    }
+  }
+}

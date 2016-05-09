@@ -5,6 +5,9 @@ Content Area
 /* Entries
 --------------------------------------------- */
 .post-image {
+  &.alignright{
+    margin-left: 2em;
+  }
 }
 article.entry {
   border-radius: 3px;
@@ -40,8 +43,27 @@ article.entry {
   list-style-type: decimal;
 }
 
+.entry-content ul {
+  margin: 2em 0;
+  padding: 0;
+  -moz-column-count: 2;
+  -moz-column-gap: 3em;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 3em;
+  column-count: 2;
+  column-gap: 3em;
+  -webkit-column-rule: 2px solid @vltgrey; /* Chrome, Safari, Opera */
+  -moz-column-rule: 2px solid @vltgrey; /* Firefox */
+  column-rule: 2px solid @vltgrey;
+}
 .entry-content ul li {
-  list-style-type: disc;
+  page-break-inside: avoid;
+  list-style: none outside none;
+  font-weight: 500;
+  padding: 0 0 1em 0;
+  em{
+    font-style: normal;
+  }
 }
 
 .entry-content ol ol,
@@ -89,14 +111,16 @@ article.entry {
 .entry-header{
   .entry-title{
     .customheader(3.6);
-    font-weight: 300;
-    color: @medgrey;
+    font-weight: 500;
+    color: @dkblue;
     line-height: 1.25;
+    margin: 0;
   }
   .entry-subtitle{
     .customheader(3.2);
+    color: @medgrey;
+    line-height: 1.25;
     font-weight: 200;
-    border-bottom: 1px solid @medgrey;
   }
 }
 
