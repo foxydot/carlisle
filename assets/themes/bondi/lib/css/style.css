@@ -7373,9 +7373,6 @@ Footer Widgets
 .footer-widgets .widget.widget_nav_menu ul.menu > li .sub-menu li a {
   color: #54A4D9;
 }
-.footer-widgets .widget.widget_nav_menu ul.menu > li.first-child {
-  display: none;
-}
 /*
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
