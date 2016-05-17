@@ -30,6 +30,7 @@ function column_shortcode($atts, $content = null){
 	extract( shortcode_atts( array(
 	'cols' => '3',
 	'position' => '',
+	'url' => false,
 	), $atts ) );
 	switch($cols){
 		case 5:
@@ -52,7 +53,12 @@ function column_shortcode($atts, $content = null){
 		case 'last':
 			$classes[] = 'last';
 	}
-	return '<div class="'.implode(' ',$classes).'">'.do_shortcode($content).'</div>';
+    if($url){
+        $content = '<a href="'.$url.'">'.do_shortcode($content).'</a>';
+    } else {
+        $content = do_shortcode($content);
+    }
+	return '<div class="'.implode(' ',$classes).'">'.$content.'</div>';
 }
 add_shortcode('mailto','msdlab_mailto_function');
 function msdlab_mailto_function($atts, $content){
