@@ -6703,6 +6703,10 @@ Site Navigation
   text-transform: none;
   line-height: 1.25;
 }
+.nav-primary .genesis-nav-menu li.menu-item .sub-menu li.menu-item .sub-menu {
+  margin-left: 90%;
+  margin-top: -2em;
+}
 .nav-primary .genesis-nav-menu li.menu-item .sub-menu li.last-child > a {
   border: 0;
 }
@@ -7363,6 +7367,7 @@ Footer Widgets
   font-weight: 500;
 }
 .footer-widgets .widget.widget_nav_menu ul.menu > li .sub-menu {
+  margin-left: 1em;
   font-size: 0.9em;
 }
 .footer-widgets .widget.widget_nav_menu ul.menu > li .sub-menu li a {
