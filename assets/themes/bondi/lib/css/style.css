@@ -7905,6 +7905,19 @@ div.one-fifth.last-child {
   display: block;
   float: left;
 }
+.product-header {
+  background: #1E7DC5 url(../img/bkg-product-hdr.png) no-repeat center right;
+  font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 1.8;
+  font-weight: 600;
+  padding: 0.5em;
+}
+.product-header a {
+  color: #FFF;
+}
 .nav-responsive ul,
 .nav-responsive li,
 .nav-responsive li a {

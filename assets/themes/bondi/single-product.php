@@ -14,7 +14,12 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
 add_action('genesis_after_header','bondi_product_header');
 function bondi_product_header(){
     global $post;
-    //$terms = get_the_terms('');
+    $terms = get_the_terms($post,'product_type');
+    $header='Searchlights';
+    if(count($terms == 1)){
+        $header = get_the_term_list($post,'product_type');
+    }
+    print apply_filters('product_header','<div class="product-header"><div class="wrap">'.$header.'</div></div>');
 }
 
 add_action('genesis_before_entry','bondi_product_main_image',8);
