@@ -11,9 +11,10 @@ function bondi_path_capture(){
 
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
-add_action('genesis_after_header','bondi_product_title');
-function bondi_product_title(){
-    
+add_action('genesis_after_header','bondi_product_header');
+function bondi_product_header(){
+    global $post;
+    //$terms = get_the_terms('');
 }
 
 add_action('genesis_before_entry','bondi_product_main_image',8);

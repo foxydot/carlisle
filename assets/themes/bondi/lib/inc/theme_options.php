@@ -110,7 +110,7 @@ function msdlab_blue_logo(){
         $logo = wp_get_attachment_image_src( esc_attr( genesis_get_option('logo') ), 'full' );
         if(strlen($logo[0])>0){
         print '<style>
-            .header-image .site-title a{
+            .header-image .title-area .logo a{
                 background-image: url('.$logo[0].');
             }
         </style>';

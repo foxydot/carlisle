@@ -121,9 +121,30 @@ function msdlab_do_header() {
         'xhtml'   => '<div id="title-area">',
         'context' => 'title-area',
     ) );
+    do_action( 'msdlab_site_logo' );
     do_action( 'genesis_site_title' );
     do_action( 'genesis_site_description' );
     echo '</div>';
+}
+
+add_action('msdlab_site_logo','msdlab_seo_site_logo');
+function msdlab_seo_site_logo() {
+
+    //* Set what goes inside the wrapping tags
+    $inside = sprintf( '<a href="%s">%s</a>', trailingslashit( home_url() ), get_bloginfo( 'name' ) );
+
+    //* Determine which wrapping tags to use
+    $wrap = 'div';
+
+    $wrap = apply_filters( 'genesis_site_title_wrap', $wrap );
+
+    //* Build the title
+    $title  = genesis_html5() ? sprintf( "<{$wrap} %s>", genesis_attr( 'site-logo' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );
+    $title .= genesis_html5() ? "{$inside}</{$wrap}>" : '';
+
+    //* Echo (filtered)
+    echo apply_filters( 'genesis_seo_title', $title, $inside, $wrap );
+
 }
  /**
  * Customize search form input

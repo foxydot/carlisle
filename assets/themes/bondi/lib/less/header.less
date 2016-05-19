@@ -43,9 +43,18 @@ Site Header
   .title-area{
     .make-sm-column(6);
     min-height: 110px;
-    background: url(../img/logo.png) no-repeat center left;
     margin: 0;
-    padding-left: 120px;
+    .site-logo{
+      float: left;
+      margin: 0 1em 0 -15px;
+      a{
+        display: block;
+        background: url(../img/logo.png) no-repeat center left;
+        min-height: 110px;
+        min-width: 110px;
+        text-indent: -9999px;
+      }
+    }
   }
   .site-title {
     margin: 0.8em 0 0;
