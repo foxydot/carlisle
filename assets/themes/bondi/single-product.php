@@ -37,12 +37,35 @@ function bondi_product_main_image(){
 
 remove_action('genesis_entry_header','genesis_post_info',12);
 
+add_action('genesis_entry_footer','bondi_aiming_files');
+function bondi_aiming_files(){
+    global $product_options,$wpalchemy_media_access;
+    global $application_path;
+    $product_options->the_meta();
+    $types = array('manual' => 'Local Handle Control','remote' => 'Remote Lever Control','joystick' => 'Electric Joystick Control');
+    $ret = false;
+    foreach($types AS $t => $u){
+        if($application_path){
+        
+        } else {
+            $file = $product_options->get_the_value('pdf-'.$t);
+            if($file){
+                $ret .= '<a class="aiming-button '.$t.'" href="'.$file.'">'.$u.'</a>';
+            }
+        }
+    }
+    if($ret){
+        print '<div class="aiming-buttons">'.$ret.'</div>';
+    }
+}
+
 add_action('genesis_entry_footer','bondi_pdf_files');
 function bondi_pdf_files(){
     global $product_options,$wpalchemy_media_access;
     global $application_path;
     $product_options->the_meta();
     $types = array('alpha','beta','gamma');
+    $ret = false;
     foreach($types AS $t){
         if($application_path){
         
@@ -50,9 +73,12 @@ function bondi_pdf_files(){
             $file = $product_options->get_the_value('pdf-'.$t.'-main');
             if($file){
                 $label = $product_options->get_the_value('pdf-'.$t.'-main-label');
-                print '<a class="pdf-button" href="'.$file.'">'.$label.'</a>';
+                $ret .= '<a class="pdf-button" href="'.$file.'">'.$label.'</a>';
             }
         }
+    }
+    if($ret){
+        print '<div class="pdf-files">'.$ret.'</div>';
     }
 }
 

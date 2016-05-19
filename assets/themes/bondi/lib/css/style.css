@@ -7841,7 +7841,31 @@ div.one-fifth.last-child {
 .entry-footer {
   clear: both;
 }
-.entry-footer a.pdf-button {
+.entry-footer .aiming-buttons {
+  padding: 2em 0;
+}
+.entry-footer .aiming-buttons a.aiming-button {
+  text-indent: -9999px;
+  margin: 0 0.5em;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: #A6E4E4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  width: 250px;
+}
+.entry-footer .aiming-buttons a.aiming-button.manual {
+  background-image: url(../img/icon-local.png);
+}
+.entry-footer .aiming-buttons a.aiming-button.remote {
+  background-image: url(../img/icon-remote.png);
+}
+.entry-footer .aiming-buttons a.aiming-button.joystick {
+  background-image: url(../img/icon-joystick.png);
+}
+.entry-footer .pdf-files a.pdf-button {
   background-color: #D43136;
   border: 0;
   border-radius: 8px;
@@ -7863,7 +7887,7 @@ div.one-fifth.last-child {
   width: 16em;
   line-height: 1;
 }
-.entry-footer a.pdf-button:before {
+.entry-footer .pdf-files a.pdf-button:before {
   font-family: "FontAwesome";
   font-size: 2em;
   content: '\f1c1';

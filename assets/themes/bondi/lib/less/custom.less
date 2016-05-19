@@ -227,20 +227,46 @@ div.one-fifth{
 
 .entry-footer{
   clear: both;
-  a.pdf-button{
-    .button(@red);
-    margin: 0 0.5em;
-    display: inline-block;
-    width: 16em;
-    line-height: 1;
-    &:before{
-      .fontawesome;
-      font-size: 2em;
-      content: '\f1c1';
-      margin-right: 0.5em;
+  .aiming-buttons{
+    padding: 2em 0;
+    a.aiming-button{
+      text-indent: -9999px;
+      margin: 0 0.5em;
+      display: inline-block;
+      border-radius: 100%;
+      background-color: @ltblue;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 250px;
+      width: 250px;
+      &.manual{
+        background-image: url(../img/icon-local.png);
+      }
+      &.remote{
+        background-image: url(../img/icon-remote.png);
+      }
+      &.joystick{
+        background-image: url(../img/icon-joystick.png);
+      }
+    }
+  }
+  .pdf-files{
+    a.pdf-button{
+      .button(@red);
+      margin: 0 0.5em;
+      display: inline-block;
+      width: 16em;
       line-height: 1;
-      display: block;
-      float: left;
+      &:before{
+        .fontawesome;
+        font-size: 2em;
+        content: '\f1c1';
+        margin-right: 0.5em;
+        line-height: 1;
+        display: block;
+        float: left;
+      }
     }
   }
 }

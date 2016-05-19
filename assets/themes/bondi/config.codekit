@@ -1517,6 +1517,39 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/lib\/img\/icon-joystick.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25387,
+		"inputAbbreviatedPath": "\/lib\/img\/icon-joystick.png",
+		"outputAbbreviatedPath": "\/lib\/img\/icon-joystick.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/lib\/img\/icon-local.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23729,
+		"inputAbbreviatedPath": "\/lib\/img\/icon-local.png",
+		"outputAbbreviatedPath": "\/lib\/img\/icon-local.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/lib\/img\/icon-remote.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/lib\/img\/icon-remote.png",
+		"outputAbbreviatedPath": "\/lib\/img\/icon-remote.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/lib\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,

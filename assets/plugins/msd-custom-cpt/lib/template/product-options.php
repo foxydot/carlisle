@@ -8,6 +8,45 @@ global $wpalchemy_media_access;
 ?>
 <div class="msdlab_meta_control" id="msdlab_meta_control">
     <div class="table">
+    <div class="cell">
+        <h2>Aiming PDFs</h2>
+    </div>
+    <div class="cell file">
+        <?php $mb->the_field('pdf-manual'); ?>
+        <label>Manual Aiming PDF</label>
+        <div class="input_container">
+            <?php $mb->the_field('pdf-manual'); ?>
+            <?php $group_name = 'pdf-manual'; ?>
+            <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
+            <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
+            <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
+        </div>
+    </div>
+    <div class="cell file">
+        <?php $mb->the_field('pdf-remote'); ?>
+        <label>Remote Aiming PDF</label>
+        <div class="input_container">
+            <?php $mb->the_field('pdf-remote'); ?>
+            <?php $group_name = 'pdf-remote'; ?>
+            <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
+            <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
+            <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
+        </div>
+    </div>
+    <div class="cell file">
+        <?php $mb->the_field('pdf-joystick'); ?>
+        <label>Joystick Aiming PDF</label>
+        <div class="input_container">
+            <?php $mb->the_field('pdf-joystick'); ?>
+            <?php $group_name = 'pdf-joystick'; ?>
+            <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
+            <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
+            <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
+        </div>
+    </div>
+    <div class="cell">
+        <h2>Additional PDFs</h2>
+    </div>
     <div class="cell file">
         <?php $mb->the_field('pdf-alpha-main-label'); ?>
         <label>PDF Alpha Label</label>            
