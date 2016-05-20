@@ -94,11 +94,36 @@ function bondi_product_carousel(){
     
     $meta = $product_options->the_meta();
     if(is_object($product_options)){
+        $i = 0;
         while($product_options->have_fields('carousel')){
+            $img = $product_options->get_the_value('background-image');
             //setup slides
+            $active = $i==0?' active':'';
+            $slides[$i] = '<div class="item'.$active.'">
+                <div class="slide" style="background-image:url('.$img.')">
+                </div>
+            </div>';
+            $i++;
         }
     }
     //if there are slides, wrap them and activate
+    if(count($slides)>0){
+        $controls = '<!-- Controls -->
+          <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>';
+        print '<div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">';
+        print implode("\n", $slides);
+        print '</div>';
+        print $controls;
+        print '</div>';
+    }
 }
 
 genesis();

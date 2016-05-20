@@ -7918,6 +7918,18 @@ div.one-fifth.last-child {
 .product-header a {
   color: #FFF;
 }
+#carousel .carousel-inner .item .slide {
+  min-height: 40vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#carousel .carousel-control {
+  padding-top: 16vw;
+}
+#carousel .carousel-control .fa {
+  font-size: 8vw;
+}
 .nav-responsive ul,
 .nav-responsive li,
 .nav-responsive li a {
