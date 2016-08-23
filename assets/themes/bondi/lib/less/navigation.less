@@ -151,7 +151,7 @@ Site Navigation
           }
           .sub-menu{
             margin-left: 90%;
-            margin-top: -2em;
+            margin-top: -1.8em;
           }
         }
         li.last-child>a{
@@ -163,6 +163,11 @@ Site Navigation
         }
       }
     }
+    >li.menu-item
+      >.sub-menu{
+        margin-top: -6px;
+        border-top: 6px solid @ltgrey;
+      }
     li:hover, li.current-menu-item, li.current-menu-ancestor{
       a, a:hover{
         text-decoration: none;

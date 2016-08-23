@@ -6714,7 +6714,7 @@ Site Navigation
 }
 .nav-primary .genesis-nav-menu li.menu-item .sub-menu li.menu-item .sub-menu {
   margin-left: 90%;
-  margin-top: -2em;
+  margin-top: -1.8em;
 }
 .nav-primary .genesis-nav-menu li.menu-item .sub-menu li.last-child > a {
   border: 0;
@@ -6722,6 +6722,10 @@ Site Navigation
 .nav-primary .genesis-nav-menu li.menu-item .sub-menu li:hover > a {
   color: #A9A7B4;
   text-decoration: none;
+}
+.nav-primary .genesis-nav-menu > li.menu-item > .sub-menu {
+  margin-top: -6px;
+  border-top: 6px solid #A9A7B4;
 }
 .nav-primary .genesis-nav-menu li:hover a,
 .nav-primary .genesis-nav-menu li.current-menu-item a,
