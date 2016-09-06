@@ -85,6 +85,7 @@ if(!class_exists('MSDContentSource')){
                         transform: rotate(-30deg);
                         line-height: 1;
                         width: 100%;
+                        z-index: -5;
                     }
                 </style>
             ';
