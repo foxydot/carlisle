@@ -95,3 +95,22 @@ function msd_carousel_wrapper($slides,$params = array()){
     </div>
 </div>';
 }
+
+add_action('genesis_before_entry','bondi_product_main_image',8);
+function bondi_product_main_image(){
+    global $post;
+    //setup thumbnail image args to be used with genesis_get_image();
+    $size = 'post-image'; // Change this to whatever add_image_size you want
+    $default_attr = array(
+            'class' => "attachment-$size $size",
+            'alt'   => $post->post_title,
+            'title' => $post->post_title,
+    );
+
+    // This is the most important part!  Checks to see if the post has a Post Thumbnail assigned to it. You can delete the if conditional if you want and assume that there will always be a thumbnail
+    if ( has_post_thumbnail() && is_cpt('product') ) {
+        print '<section class="post-image alignright">';
+        printf( '%s', genesis_get_image( array( 'size' => $size, 'attr' => $default_attr ) ) );
+        print '</section>';
+    }
+}
