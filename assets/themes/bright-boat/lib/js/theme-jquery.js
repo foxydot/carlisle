@@ -29,10 +29,12 @@ function strripos(haystack, needle, offset) {
 }
 
 jQuery(document).ready(function($) {	
-    $('*:first-child').addClass('first-child');
-    $('*:last-child').addClass('last-child');
-    $('*:nth-child(even)').addClass('even');
-    $('*:nth-child(odd)').addClass('odd');
+    $('p:empty').remove();
+    $('body *:first-child').addClass('first-child');
+    $('body *:last-child').addClass('last-child');
+    $('body *:nth-child(even)').addClass('even');
+    $('body *:nth-child(odd)').addClass('odd');
+    $('body').css('opacity','1');
 	
     var numwidgets = $('.footer-widgets section.widget').length;
     $('.footer-widgets').addClass('cols-'+numwidgets);
