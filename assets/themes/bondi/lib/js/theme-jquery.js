@@ -43,4 +43,6 @@ jQuery(document).ready(function($) {
 	    }
 	});
 	
+	$('a[href$=".pdf"]').prop('target', '_blank');
+	
 });
