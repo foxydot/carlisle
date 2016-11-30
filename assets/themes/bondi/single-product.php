@@ -37,7 +37,7 @@ function bondi_aiming_files(){
         } else {
             $file = $product_options->get_the_value('pdf-'.$t);
             if($file){
-                $ret .= '<a class="aiming-button '.$t.'" href="'.$file.'">'.$u.'</a>';
+                $ret .= '<a class="aiming-button '.$t.'" href="'.$file.'" target=""_blank">'.$u.'</a>';
             }
         }
     }
@@ -60,7 +60,7 @@ function bondi_pdf_files(){
             $file = $product_options->get_the_value('pdf-'.$t.'-main');
             if($file){
                 $label = $product_options->get_the_value('pdf-'.$t.'-main-label');
-                $ret .= '<a class="pdf-button" href="'.$file.'">'.$label.'</a>';
+                $ret .= '<a class="pdf-button" href="'.$file.'" target=""_blank">'.$label.'</a>';
             }
         }
     }
