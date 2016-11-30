@@ -1,8 +1,10 @@
 jQuery(document).ready(function($) {	
+    $('p:empty').remove();
     $('body *:first-child').addClass('first-child');
     $('body *:last-child').addClass('last-child');
     $('body *:nth-child(even)').addClass('even');
     $('body *:nth-child(odd)').addClass('odd');
+    $('body').css('opacity','1');
 	
 	var numwidgets = $('#footer-widgets div.widget').length;
 	$('#footer-widgets').addClass('cols-'+numwidgets);

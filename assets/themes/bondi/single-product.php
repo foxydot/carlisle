@@ -22,25 +22,6 @@ function bondi_product_header(){
     print apply_filters('product_header','<div class="product-header"><div class="wrap">'.$header.'</div></div>');
 }
 
-add_action('genesis_before_entry','bondi_product_main_image',8);
-function bondi_product_main_image(){
-    global $post;
-    //setup thumbnail image args to be used with genesis_get_image();
-    $size = 'post-image'; // Change this to whatever add_image_size you want
-    $default_attr = array(
-            'class' => "attachment-$size $size",
-            'alt'   => $post->post_title,
-            'title' => $post->post_title,
-    );
-
-    // This is the most important part!  Checks to see if the post has a Post Thumbnail assigned to it. You can delete the if conditional if you want and assume that there will always be a thumbnail
-    if ( has_post_thumbnail() && is_cpt('product') ) {
-        print '<section class="post-image alignright">';
-        printf( '%s', genesis_get_image( array( 'size' => $size, 'attr' => $default_attr ) ) );
-        print '</section>';
-    }
-}
-
 remove_action('genesis_entry_header','genesis_post_info',12);
 
 add_action('genesis_entry_footer','bondi_aiming_files');
@@ -56,7 +37,7 @@ function bondi_aiming_files(){
         } else {
             $file = $product_options->get_the_value('pdf-'.$t);
             if($file){
-                $ret .= '<a class="aiming-button '.$t.'" href="'.$file.'">'.$u.'</a>';
+                $ret .= '<a class="aiming-button '.$t.'" href="'.$file.'" target=""_blank">'.$u.'</a>';
             }
         }
     }
@@ -79,7 +60,7 @@ function bondi_pdf_files(){
             $file = $product_options->get_the_value('pdf-'.$t.'-main');
             if($file){
                 $label = $product_options->get_the_value('pdf-'.$t.'-main-label');
-                $ret .= '<a class="pdf-button" href="'.$file.'">'.$label.'</a>';
+                $ret .= '<a class="pdf-button" href="'.$file.'" target=""_blank">'.$label.'</a>';
             }
         }
     }
