@@ -6925,7 +6925,7 @@ article.entry {
 }
 .entry-content ul li {
   page-break-inside: avoid;
-  list-style: none outside none;
+  list-style: bullet outside none;
   font-weight: 500;
   padding: 0 0 1em 0;
 }
