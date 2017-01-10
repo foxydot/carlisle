@@ -74,7 +74,7 @@
 /* Buttons */
 .button:hover,
 .button a:hover {
-  background-color: #F16528;
+  background-color: #f16528;
   border: 0;
   border-radius: 8px;
   padding: 0.5em 1em;
@@ -108,7 +108,7 @@
 .sectioned-page-wrapper .section {
   padding: 4rem 0;
   background-size: cover;
-  color: #6B6B6D;
+  color: #6b6b6d;
 }
 .sectioned-page-wrapper .section .section-body .wrap .row .section-content {
   line-height: 1.2;
@@ -130,11 +130,11 @@
 .sectioned-page-wrapper .section.section-primary-markets h4 {
   font-size: 2rem;
   font-weight: 500;
-  color: #000;
+  color: #000000;
 }
 .sectioned-page-wrapper .section.section-primary-markets h4:after {
   content: '';
-  border-bottom: 1px solid #D43136;
+  border-bottom: 1px solid #d43136;
   display: block;
   width: 70%;
   margin: 1rem auto;
@@ -145,12 +145,12 @@
   margin-top: 1.25em;
 }
 .sectioned-page-wrapper .section.section-feature-product {
-  color: #FFF;
+  color: #ffffff;
 }
 .sectioned-page-wrapper .section.section-feature-product .section-title h3,
 .sectioned-page-wrapper .section.section-feature-product .section-subtitle,
 .sectioned-page-wrapper .section.section-feature-product h4 {
-  color: #FFF;
+  color: #ffffff;
   max-width: 900px;
 }
 .sectioned-page-wrapper .section.section-feature-product .section-content {
@@ -162,7 +162,7 @@
   font-weight: 600;
 }
 .sectioned-page-wrapper .section.section-feature-product .section-content ul {
-  border-bottom: 1px dashed #FFF;
+  border-bottom: 1px dashed #ffffff;
   margin-bottom: 1em;
 }
 .sectioned-page-wrapper .section.section-feature-product .section-content ul li {
@@ -196,7 +196,7 @@
   clear: both;
 }
 .sectioned-page-wrapper .section.section-about .column-3 {
-  border-left: 1px solid #F1F1F3;
+  border-left: 1px solid #f1f1f3;
 }
 .sectioned-page-wrapper .section.section-about .section-content h4 {
   font-weight: 500;
@@ -207,3 +207,4 @@
   font-weight: 400;
   font-size: 2.4rem;
 }
+/*# sourceMappingURL=homepage.css.map */
