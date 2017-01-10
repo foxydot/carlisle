@@ -7223,6 +7223,7 @@ Footer Widgets
   background-image: url(../img/wave.png), linear-gradient(to bottom, #e4f0ff 0%, #ffffff 100%);
   background-repeat: no-repeat;
   background-position: center bottom;
+  font-size: smaller;
 }
 .footer-widgets .footer-widgets-1 {
   font-family: "Montserrat", "Trebuchet MS", Calibri, sans-serif;
