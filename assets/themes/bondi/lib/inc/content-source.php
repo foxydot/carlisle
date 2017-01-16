@@ -93,4 +93,4 @@ if(!class_exists('MSDContentSource')){
         }
     }
 }
-$content_source = new MSDContentSource;
+//$content_source = new MSDContentSource;
