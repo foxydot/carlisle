@@ -1,9 +1,4 @@
-/*
-HTML5 Reset
----------------------------------------------------------------------------------------------------- */
-/* Baseline Normalize
-  normalize.css v2.1.2 | MIT License | git.io/normalize
---------------------------------------------- */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 article,
 aside,
 details,
@@ -32,8 +27,8 @@ audio:not([controls]) {
 }
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
@@ -66,13 +61,13 @@ hr {
 }
 mark {
   background: #ff0;
-  color: #000000;
+  color: #000;
 }
 code,
 kbd,
 pre,
 samp {
-  font-family: monospace,serif;
+  font-family: monospace, serif;
   font-size: 1em;
 }
 pre {
@@ -107,7 +102,7 @@ figure {
   margin: 0;
 }
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -170,48 +165,4 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Box Sizing
---------------------------------------------- */
-*,
-input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* Float Clearing
---------------------------------------------- 
-
-.archive-pagination:before,
-.clearfix:before,
-.entry:before,
-.entry-pagination:before,
-.footer-widgets:before,
-.nav-primary:before,
-.nav-secondary:before,
-.site-container:before,
-.site-footer:before,
-.site-header:before,
-.site-inner:before,
-.wrap:before {
-  content: " ";
-  display: table;
-}
-
-.archive-pagination:after,
-.clearfix:after,
-.entry:after,
-.entry-pagination:after,
-.footer-widgets:after,
-.nav-primary:after,
-.nav-secondary:after,
-.site-container:after,
-.site-footer:after,
-.site-header:after,
-.site-inner:after,
-.wrap:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
-*/
-/*# sourceMappingURL=reset.css.map */
+/*# sourceMappingURL=normalize.css.map */
