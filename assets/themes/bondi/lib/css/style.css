@@ -6366,9 +6366,10 @@ div.gform_wrapper .gform_footer input[type="submit"] {
   font-size: 14px;
   font-size: 1.4rem;
 }
-#gform_submit_button_5 {
+div.gform_wrapper .gform_footer input[type="submit"] #gform_submit_button_5 {
   float: right;
   margin-bottom: 40px;
+  width: 25%;
 }
 /* Jetpack
 --------------------------------------------- */
