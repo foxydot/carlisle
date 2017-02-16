@@ -225,6 +225,20 @@ div.one-fifth{
   }
 }
 
+@media only screen and (max-width: 801px) {
+    div.one-fifth{
+  width: 50%;
+  margin: 0 auto;
+  float: none;
+  &.first-child{
+    margin-left: auto;
+  }
+  &.last-child{
+    margin-right: auto;
+  }
+}
+}
+
 .entry-footer{
   clear: both;
   .aiming-buttons{

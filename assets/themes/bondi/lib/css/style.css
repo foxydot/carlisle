@@ -7863,6 +7863,19 @@ div.one-fifth.first-child {
 div.one-fifth.last-child {
   margin-right: 0;
 }
+@media only screen and (max-width: 801px) {
+  div.one-fifth {
+    width: 50%;
+    margin: 0 auto;
+    float: none;
+  }
+  div.one-fifth.first-child {
+    margin-left: auto;
+  }
+  div.one-fifth.last-child {
+    margin-right: auto;
+  }
+}
 .entry-footer {
   clear: both;
 }
